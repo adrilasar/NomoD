@@ -1,5 +1,6 @@
 package com.adrilasar.nomod;
 
+import com.adrilasar.nomod.block.ModBlocks;
 import com.adrilasar.nomod.entity.client.GuardianRenderer;
 import com.adrilasar.nomod.entity.custom.ModEntityTypes;
 import com.adrilasar.nomod.item.ModItems;
@@ -27,6 +28,7 @@ public class NomoD
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
         ModEntityTypes.register(eventBus);
 
         // Register the setup method for modloading
