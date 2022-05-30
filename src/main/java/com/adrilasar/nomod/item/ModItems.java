@@ -17,6 +17,13 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntityTypes.GUARDIAN_R,0x5D5955, 0xE06200,
                     new Item.Properties().tab(ModItemGroup.NOMOD_TAB)));
 
+    //TODO Cambiar nombre
+    public static final RegistryObject<Item> NUEVO_MINERAL = ITEMS.register("nuevo_mineral",
+            () -> new Item(new Item.Properties().tab(ModItemGroup.NOMOD_TAB)));
+
+    //TODO Cambiar nombre
+    public static final RegistryObject<Item> RAW_NUEVO_MINERAL = ITEMS.register("raw_nuevo_mineral",
+            () -> new Item(new Item.Properties().tab(ModItemGroup.NOMOD_TAB)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
