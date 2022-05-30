@@ -23,7 +23,12 @@ public class ModBlocks
 
     //TODO Cambiar nombre
     public static final RegistryObject<Block> NUEVO_MINERAL_BLOCK = registerBlock("nuevo_mineral_block",
-            () -> new Block(AbstractBlock.Properties.of(Material.METAL).strength(9f).requiresCorrectToolForDrops()),
+            () -> new Block(AbstractBlock.Properties.of(Material.METAL).strength(9f)),
+            ModItemGroup.NOMOD_TAB);
+
+    //TODO Cambiar nombre
+    public static final RegistryObject<Block> NUEVO_MINERAL_ORE = registerBlock("raw_nuevo_mineral_block",
+            () -> new Block(AbstractBlock.Properties.of(Material.STONE).strength(9f).requiresCorrectToolForDrops()),
             ModItemGroup.NOMOD_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, ItemGroup tab) {

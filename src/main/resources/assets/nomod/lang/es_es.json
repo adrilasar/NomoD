@@ -4,6 +4,7 @@
   "item.nomod.guardian_spawn_egg": "Generar Guardian de las Ruinas",
 
   "item.nomod.nuevo_mineral": "Nuevo Mineral",
-  "item.nomod.raw_nuevo_mineral": "Nuevo Mineral",
-  "block.nomod.nuevo_mineral_block": "Bloque de Nuevo Mineral"
+  "item.nomod.raw_nuevo_mineral": "Nuevo Mineral en bruto",
+  "block.nomod.nuevo_mineral_block": "Bloque de Nuevo Mineral",
+  "block.nomod.nuevo_mineral_ore": "Mena de Nuevo Mineral"
 }

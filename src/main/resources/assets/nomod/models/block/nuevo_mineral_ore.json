@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "nomod:block/nuevo_mineral_ore"
+  }
+}
