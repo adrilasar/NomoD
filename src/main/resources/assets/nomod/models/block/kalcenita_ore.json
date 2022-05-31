@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "nomod:block/nuevo_mineral_block"
+    "all": "nomod:block/kalcenita_ore"
   }
 }

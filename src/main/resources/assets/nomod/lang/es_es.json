@@ -3,8 +3,8 @@
 
   "item.nomod.guardian_spawn_egg": "Generar Guardian de las Ruinas",
 
-  "item.nomod.nuevo_mineral": "Nuevo Mineral",
-  "item.nomod.raw_nuevo_mineral": "Nuevo Mineral en bruto",
-  "block.nomod.nuevo_mineral_block": "Bloque de Nuevo Mineral",
-  "block.nomod.nuevo_mineral_ore": "Mena de Nuevo Mineral"
+  "item.nomod.kalcenita_ingot": "Lingote de Kalcenita",
+  "item.nomod.raw_kalcenita": "Kalcenita en bruto",
+  "block.nomod.kalcenita_block": "Bloque de Kalcenita",
+  "block.nomod.kalcenita_ore": "Mena de Kalcenita"
 }

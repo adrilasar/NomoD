@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "nomod:item/raw_nuevo_mineral"
+    "layer0": "nomod:item/raw_kalcenita"
   }
 }

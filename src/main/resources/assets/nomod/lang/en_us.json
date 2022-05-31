@@ -3,8 +3,8 @@
 
   "item.nomod.guardian_spawn_egg": "Spawn Ruin Guard",
 
-  "item.nomod.nuevo_mineral": "Nuevo Mineral",
-  "item.nomod.raw_nuevo_mineral": "Nuevo Mineral en bruto",
-  "block.nomod.nuevo_mineral_block": "Bloque de Nuevo Mineral",
-  "block.nomod.nuevo_mineral_ore": "Mena de Nuevo Mineral"
+  "item.nomod.kalcenita_ingot": "Kalcenite ingot",
+  "item.nomod.raw_kalcenita": "Raw Kalcenite",
+  "block.nomod.kalcenita_block": "Kalcenite block",
+  "block.nomod.kalcenita_ore": "Kalcenite ore"
 }

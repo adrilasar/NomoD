@@ -21,13 +21,11 @@ public class ModBlocks
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, NomoD.MOD_ID);
 
-    //TODO Cambiar nombre
-    public static final RegistryObject<Block> NUEVO_MINERAL_BLOCK = registerBlock("nuevo_mineral_block",
+    public static final RegistryObject<Block> KALCENITA_BLOCK = registerBlock("kalcenita_block",
             () -> new Block(AbstractBlock.Properties.of(Material.METAL).strength(9f)),
             ModItemGroup.NOMOD_TAB);
 
-    //TODO Cambiar nombre
-    public static final RegistryObject<Block> NUEVO_MINERAL_ORE = registerBlock("raw_nuevo_mineral_block",
+    public static final RegistryObject<Block> KALCENITA_ORE = registerBlock("kalcenita_ore",
             () -> new Block(AbstractBlock.Properties.of(Material.STONE).strength(9f).requiresCorrectToolForDrops()),
             ModItemGroup.NOMOD_TAB);
 
