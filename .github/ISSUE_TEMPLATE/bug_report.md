@@ -1,10 +1,10 @@
 ---
 name: Reportar bug
-about: Describe el bug para poder solucionarlo
+about: Describe un bug para poder poder solucionarlo
 title: 'Bug: <escribe titulo>'
 labels: bug
 assignees: adrilasar
-proyects: Desarrollo
+projects: Desarrollo
 
 ---
 
@@ -18,4 +18,4 @@ Pasos para producirlo:
 3. 
 
 **Capturas de pantalla**
-Si ayuda, añade capturas de pantalla para explicar el problema.
+Si ayuda, añade capturas de pantalla para explicar el problema (Arrastra y suelta los archivos aquí).

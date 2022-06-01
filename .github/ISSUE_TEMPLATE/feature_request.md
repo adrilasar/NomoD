@@ -1,20 +1,15 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
+name: Pedir nueva función
+about: Propón una idea para el mod
 title: 'Petición:'
 labels: enhancement
-assignees: ''
+assignees: adrilasar, DaniC606
+projects: Desarrollo
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+**¿Tu sugerencia está relacionada con un bug? ¿Qué solución te gustaría?**
+Una descripción clara y concisa de cuál es el problema. Ej. Es muy molesto que [...]
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
-
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
-
-**Additional context**
-Add any other context or screenshots about the feature request here.
+**Descripción de tu propuesta**
+Alárgate todo lo que quieras.
