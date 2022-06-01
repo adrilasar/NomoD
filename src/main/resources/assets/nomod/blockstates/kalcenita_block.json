@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "models": "nomod:block/kalcenita_block" }
+    "": { "model": "nomod:block/kalcenita_block" }
   }
 }
