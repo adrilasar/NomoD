@@ -8,6 +8,11 @@ projects: Desarrollo
 
 ---
 
+<!--
+HAZ CLICK EN PROJECTS (en la columna de la derecha)
+Y SELECCIONA "Desarrollo" (si aparece)
+-->
+
 **Describe el bug**
 Una descripción de lo que es el error.
 
