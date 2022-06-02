@@ -47,11 +47,7 @@ public class GuardianRuinas extends MonsterEntity implements IAnimatable {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("andar", true));
             return PlayState.CONTINUE;
         }
-        List <Object> list = event.getExtraData();
-
-        //TODO Animacion al atacar
-        //event.getController().setAnimation(new AnimationBuilder().addAnimation("ataquegiratorio", true));
-        return PlayState.CONTINUE;
+        else return PlayState.STOP;
     }
 
     protected void registerGoals() {
