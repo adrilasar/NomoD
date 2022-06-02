@@ -1,10 +1,10 @@
 ---
 name: Pedir nueva función
 about: Propón una idea para el mod
-title: 'Petición:'
+title: 'Petición: <escribe titulo>'
 labels: enhancement
 assignees: adrilasar, DaniC606
-projects: Desarrollo
+project_ids: Desarrollo
 
 ---
 
