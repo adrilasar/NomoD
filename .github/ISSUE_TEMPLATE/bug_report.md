@@ -4,7 +4,7 @@ about: Describe un bug para poder poder solucionarlo
 title: 'Bug: <escribe titulo>'
 labels: bug
 assignees: adrilasar
-project_ids: Desarrollo
+projects: Desarrollo
 
 ---
 

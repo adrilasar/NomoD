@@ -4,7 +4,7 @@ about: Propón una idea para el mod
 title: 'Petición: <escribe titulo>'
 labels: enhancement
 assignees: adrilasar, DaniC606
-project_ids: Desarrollo
+projects: Desarrollo
 
 ---
 
