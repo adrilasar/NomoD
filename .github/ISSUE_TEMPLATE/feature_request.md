@@ -2,7 +2,7 @@
 name: Pedir nueva función
 about: Propón una idea para el mod
 title: 'Petición: <escribe titulo>'
-labels: enhancement
+labels: nueva funcion
 assignees: adrilasar, DaniC606
 projects: Desarrollo
 
