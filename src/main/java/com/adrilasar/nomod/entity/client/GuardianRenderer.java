@@ -15,7 +15,7 @@ public class GuardianRenderer extends GeoEntityRenderer<GuardianRuinas> {
 
     public GuardianRenderer(EntityRendererManager renderManager) {
         super(renderManager, new GuardianModel());
-        this. shadowRadius = 0.5f;
+        this. shadowRadius = 2.0f;
     }
 
     @Override
