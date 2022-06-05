@@ -9,6 +9,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -18,17 +19,19 @@ import java.util.function.Supplier;
 
 public class ModBlocks
 {
+    //BLOCKS
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, NomoD.MOD_ID);
 
     public static final RegistryObject<Block> KALCENITA_BLOCK = registerBlock("kalcenita_block",
-            () -> new Block(AbstractBlock.Properties.of(Material.METAL).strength(9f)),
+            () -> new Block(AbstractBlock.Properties.of(Material.METAL).strength(50.0F, 1200.0F).requiresCorrectToolForDrops().harvestTool(ToolType.PICKAXE)),
             ModItemGroup.NOMOD_TAB);
 
     public static final RegistryObject<Block> KALCENITA_ORE = registerBlock("kalcenita_ore",
-            () -> new Block(AbstractBlock.Properties.of(Material.STONE).strength(9f).requiresCorrectToolForDrops()),
+            () -> new Block(AbstractBlock.Properties.of(Material.STONE).strength(30.0F, 1200.0F).requiresCorrectToolForDrops().harvestTool(ToolType.PICKAXE).harvestLevel(4)),
             ModItemGroup.NOMOD_TAB);
 
+    //REGISTRIES
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, ItemGroup tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);

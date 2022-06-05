@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "nomod:kalcenita_ore"
+  },
+  "result": "nomod:kalcenita_ingot",
+  "experience": 2.0,
+  "cookingtime": 400
+}

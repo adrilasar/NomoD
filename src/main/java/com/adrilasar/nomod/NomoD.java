@@ -4,6 +4,7 @@ import com.adrilasar.nomod.block.ModBlocks;
 import com.adrilasar.nomod.entity.client.GuardianRenderer;
 import com.adrilasar.nomod.entity.custom.ModEntityTypes;
 import com.adrilasar.nomod.item.ModItems;
+import com.adrilasar.nomod.world.ModWorldEvents;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;

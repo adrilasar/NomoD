@@ -3,8 +3,8 @@
 
   "item.nomod.guardian_spawn_egg": "Spawn Ruin Guard",
 
-  "item.nomod.kalcenita_ingot": "Kalcenite ingot",
-  "item.nomod.raw_kalcenita": "Raw Kalcenite",
-  "block.nomod.kalcenita_block": "Kalcenite block",
-  "block.nomod.kalcenita_ore": "Kalcenite ore"
+  "item.nomod.kalcenita_ingot": "§5Kalcenite§r ingot",
+  "item.nomod.raw_kalcenita": "Raw §5Kalcenite§r",
+  "block.nomod.kalcenita_block": "§5Kalcenite§r block",
+  "block.nomod.kalcenita_ore": "§5Kalcenite§r ore"
 }

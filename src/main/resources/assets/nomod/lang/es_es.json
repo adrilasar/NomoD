@@ -3,8 +3,8 @@
 
   "item.nomod.guardian_spawn_egg": "Generar Guardian de las Ruinas",
 
-  "item.nomod.kalcenita_ingot": "Lingote de Kalcenita",
-  "item.nomod.raw_kalcenita": "Kalcenita en bruto",
-  "block.nomod.kalcenita_block": "Bloque de Kalcenita",
-  "block.nomod.kalcenita_ore": "Mena de Kalcenita"
+  "item.nomod.kalcenita_ingot": "Lingote de §5Kalcenita§r",
+  "item.nomod.raw_kalcenita": "§5Kalcenita§r en bruto",
+  "block.nomod.kalcenita_block": "Bloque de §5Kalcenita§r",
+  "block.nomod.kalcenita_ore": "Mena de §5Kalcenita§r"
 }

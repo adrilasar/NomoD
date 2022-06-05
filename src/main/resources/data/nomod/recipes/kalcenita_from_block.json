@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "nomod:kalcenita_block"
+    }
+  ],
+  "result": {
+    "item": "nomod:kalcenita_ingot",
+    "count": 9
+  }
+}
