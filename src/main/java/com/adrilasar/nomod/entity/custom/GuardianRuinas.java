@@ -1,7 +1,9 @@
 package com.adrilasar.nomod.entity.custom;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.monster.ZombieEntity;
@@ -10,6 +12,7 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.fml.common.Mod;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
@@ -60,6 +63,20 @@ public class GuardianRuinas extends ZombieEntity implements IAnimatable {
         if(Math.abs(this.getDeltaMovement().x()) > MIN_MOV || Math.abs(this.getDeltaMovement().z()) > MIN_MOV){
             return true;
         }
+        return false;
+    }
+
+    @Override
+    protected boolean isSunSensitive() {
+        return false;
+    }
+
+    @Override
+    public void killed(ServerWorld p_241847_1_, LivingEntity p_241847_2_) {
+    }
+
+    @Override
+    protected boolean convertsInWater() {
         return false;
     }
 
