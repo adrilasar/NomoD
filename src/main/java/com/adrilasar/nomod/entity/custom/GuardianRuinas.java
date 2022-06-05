@@ -1,7 +1,6 @@
 package com.adrilasar.nomod.entity.custom;
 
 import net.minecraft.block.BlockState;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
@@ -29,7 +28,7 @@ public class GuardianRuinas extends ZombieEntity implements IAnimatable {
 
 
     public static final double MIN_MOV = 0.005;
-    public static String attack;
+    public static String attackType;
     private AnimationFactory factory = new AnimationFactory(this);
 
     public GuardianRuinas(EntityType<? extends ZombieEntity> entityType, World world) {
@@ -49,7 +48,7 @@ public class GuardianRuinas extends ZombieEntity implements IAnimatable {
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if(this.isAggressive()){
-            event.getController().setAnimation(new AnimationBuilder().addAnimation(attack, true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation(attackType, true));
             return PlayState.CONTINUE;
         }
         else if (isMoving()) {
@@ -59,6 +58,9 @@ public class GuardianRuinas extends ZombieEntity implements IAnimatable {
         else return PlayState.STOP;
     }
 
+    /**
+     * If the entity has moved more than MIN_MOV units in either the x or z direction, then the entity is moving
+     */
     private boolean isMoving() {
         if(Math.abs(this.getDeltaMovement().x()) > MIN_MOV || Math.abs(this.getDeltaMovement().z()) > MIN_MOV){
             return true;
@@ -80,6 +82,9 @@ public class GuardianRuinas extends ZombieEntity implements IAnimatable {
         return false;
     }
 
+    /**
+     * Creates a new thread that will randomly choose between two attacks every 3 seconds
+     */
     private void randomAttack() {
         new Thread(){
             public void run(){
@@ -88,8 +93,8 @@ public class GuardianRuinas extends ZombieEntity implements IAnimatable {
                     int randomNum;
                     while(true){
                         randomNum = rand.nextInt(100);
-                        if(randomNum<80) attack = "ataquebasico";
-                        else attack = "ataquegiratorio";
+                        if(randomNum<80) attackType = "ataquebasico";
+                        else attackType = "ataquegiratorio";
                         Thread.sleep(3000);
                     }
                 } catch (InterruptedException e) {

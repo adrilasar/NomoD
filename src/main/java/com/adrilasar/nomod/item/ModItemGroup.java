@@ -7,7 +7,7 @@ public class ModItemGroup {
     public static final ItemGroup NOMOD_TAB = new ItemGroup("nomodtab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.GUARDIAN_SPAWN_EGG.get());
+            return new ItemStack(ModItems.NOMOD_CHARM.get());
         }
     };
 }

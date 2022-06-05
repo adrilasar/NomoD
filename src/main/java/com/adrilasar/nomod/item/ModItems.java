@@ -13,6 +13,10 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, NomoD.MOD_ID);
 
+    //ITEMS
+    public static final RegistryObject<Item> NOMOD_CHARM = ITEMS.register("nomod_charm",
+            () -> new Item(new Item.Properties().tab(ModItemGroup.NOMOD_TAB)));
+
     public static final RegistryObject<Item> GUARDIAN_SPAWN_EGG = ITEMS.register("guardian_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntityTypes.GUARDIAN_R,0x5D5955, 0xE06200,
                     new Item.Properties().tab(ModItemGroup.NOMOD_TAB)));
@@ -23,6 +27,7 @@ public class ModItems {
     public static final RegistryObject<Item> RAW_KALCENITA = ITEMS.register("raw_kalcenita",
             () -> new Item(new Item.Properties().tab(ModItemGroup.NOMOD_TAB)));
 
+    //REGISTER
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
