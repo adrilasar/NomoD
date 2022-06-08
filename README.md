@@ -9,7 +9,7 @@
   <p align="center">
     Mod para Minecraft 1.16.5
     <br />
-    <a href="https://github.com/Rover656/EnderIO-Rewrite/wiki"><strong>✅ Última versión »</strong></a>
+    <a href="https://github.com/adrilasar/NomoD/releases/latest"><strong>✅ Última versión »</strong></a>
     <br />
     <br />
     <a href="https://github.com/adrilasar/NomoD/issues/new?assignees=adrilasar&labels=bug&template=bug_report.md&title=Bug%3A+%3Cescribe+titulo%3E">Reportar Bug</a>
