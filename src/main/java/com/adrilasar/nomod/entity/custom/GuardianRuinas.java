@@ -6,6 +6,9 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.monster.ZombieEntity;
+import net.minecraft.network.datasync.DataParameter;
+import net.minecraft.network.datasync.DataSerializers;
+import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
@@ -25,15 +28,16 @@ import java.util.Random;
 
 @Mod.EventBusSubscriber
 public class GuardianRuinas extends ZombieEntity implements IAnimatable {
-
-
-    public static final double MIN_MOV = 0.005;
-    public static String attackType;
+    private static final double MIN_DELTA = 0.005;
+    private static final int RANDOM_FREQ = 40;
+    private static final int BASIC_PROB = 90;
+    private static final DataParameter<String> ATTACK_TYPE = EntityDataManager.defineId(GuardianRuinas.class, DataSerializers.STRING);
+    private int count;
     private AnimationFactory factory = new AnimationFactory(this);
 
     public GuardianRuinas(EntityType<? extends ZombieEntity> entityType, World world) {
         super(entityType, world);
-        randomAttack();
+        count = 0;
     }
 
     public static AttributeModifierMap setAttributes(){
@@ -48,7 +52,7 @@ public class GuardianRuinas extends ZombieEntity implements IAnimatable {
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if(this.isAggressive()){
-            event.getController().setAnimation(new AnimationBuilder().addAnimation(attackType, true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation(getEntityData().get(ATTACK_TYPE), true));
             return PlayState.CONTINUE;
         }
         else if (isMoving()) {
@@ -62,7 +66,7 @@ public class GuardianRuinas extends ZombieEntity implements IAnimatable {
      * If the entity has moved more than MIN_MOV units in either the x or z direction, then the entity is moving
      */
     private boolean isMoving() {
-        if(Math.abs(this.getDeltaMovement().x()) > MIN_MOV || Math.abs(this.getDeltaMovement().z()) > MIN_MOV){
+        if(Math.abs(this.getDeltaMovement().x()) > MIN_DELTA || Math.abs(this.getDeltaMovement().z()) > MIN_DELTA){
             return true;
         }
         return false;
@@ -82,26 +86,31 @@ public class GuardianRuinas extends ZombieEntity implements IAnimatable {
         return false;
     }
 
+    @Override
+    public void setAggressive(boolean p_213395_1_) {
+        this.randomAttack();
+        super.setAggressive(p_213395_1_);
+    }
+
     /**
-     * Creates a new thread that will randomly choose between two attacks every 3 seconds
+     * Randomly choose between two attacks every RANDOM_FREQ ticks being agressive
      */
     private void randomAttack() {
-        new Thread(){
-            public void run(){
-                try {
-                    Random rand = new Random();
-                    int randomNum;
-                    while(true){
-                        randomNum = rand.nextInt(100);
-                        if(randomNum<80) attackType = "ataquebasico";
-                        else attackType = "ataquegiratorio";
-                        Thread.sleep(3000);
-                    }
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }.start();
+        if(count > RANDOM_FREQ) {
+            Random rand = new Random();
+            int randomNum = rand.nextInt(100);
+
+            if(randomNum < BASIC_PROB) setAttackType("ataquebasico");
+            else setAttackType("ataquegiratorio");
+            count=0;
+        }
+        count++;
+    }
+
+    @Override
+    protected void defineSynchedData() {
+        super.defineSynchedData();
+        entityData.define(ATTACK_TYPE, "ataquebasico");
     }
 
     protected void registerGoals() {
@@ -137,5 +146,9 @@ public class GuardianRuinas extends ZombieEntity implements IAnimatable {
 
     protected float getSoundVolume() {
         return 0.2F;
+    }
+
+    public void setAttackType(String attackType) {
+        this.getEntityData().set(ATTACK_TYPE, attackType);
     }
 }
