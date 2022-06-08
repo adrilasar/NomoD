@@ -19,7 +19,7 @@
 </p>
 <br/>
 
-## ¿Como lo instalo?
+## ¿Cómo lo instalo?
 </summary>
 
 1. Descarga [Forge](https://files.minecraftforge.net/net/minecraftforge/forge/index_1.16.5.html). Asegurate que está seleccionada la `1.16.5` y en _**Download Recommended**_ haz click en _**Installer**_. Una vez descargado sigue los pasos del programa.
