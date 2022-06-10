@@ -64,7 +64,7 @@ El Nomo mod/NomoD. No hay que explicar mucho mas...
     side="BOTH"
 [[dependencies.nomod]]
     modId="storagenetwork"
-    mandatory=true
+    mandatory=false
     versionRange="[2.0.1,)"
     ordering="BEFORE"
     side="BOTH"
