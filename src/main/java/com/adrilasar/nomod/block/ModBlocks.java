@@ -25,11 +25,15 @@ public class ModBlocks
 
     public static final RegistryObject<Block> KALCENITA_BLOCK = registerBlock("kalcenita_block",
             () -> new Block(AbstractBlock.Properties.of(Material.METAL).strength(50.0F, 1200.0F).requiresCorrectToolForDrops().harvestTool(ToolType.PICKAXE)),
-            ModItemGroup.NOMOD_TAB);
+            ItemGroup.TAB_BUILDING_BLOCKS);
 
     public static final RegistryObject<Block> KALCENITA_ORE = registerBlock("kalcenita_ore",
             () -> new Block(AbstractBlock.Properties.of(Material.STONE).strength(30.0F, 1200.0F).requiresCorrectToolForDrops().harvestTool(ToolType.PICKAXE).harvestLevel(4)),
-            ModItemGroup.NOMOD_TAB);
+            ItemGroup.TAB_BUILDING_BLOCKS);
+
+    public static final RegistryObject<Block> RAW_IRON_BLOCK = registerBlock("raw_iron_block",
+            () -> new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops()),
+            ItemGroup.TAB_BUILDING_BLOCKS);
 
     //REGISTRIES
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, ItemGroup tab) {
