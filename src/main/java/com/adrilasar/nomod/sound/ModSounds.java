@@ -14,9 +14,11 @@ public class ModSounds
             DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, NomoD.MOD_ID);
 
     //SONIDOS
-    public static final RegistryObject<SoundEvent> EJEMPLO_1 = registerSoundEvent("ejemplo_1");
+    public static final RegistryObject<SoundEvent> MONSERRAT = registerSoundEvent("monserrat");
 
     public static final RegistryObject<SoundEvent> EJEMPLO_2 = registerSoundEvent("ejemplo_2");
+
+    public static final RegistryObject<SoundEvent> FIUFIU = registerSoundEvent("fiufiu");
 
     //
 

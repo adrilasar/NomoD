@@ -1,8 +1,8 @@
 {
-  "ejemplo_1": {
+  "monserrat": {
     "sounds": [
       {
-        "name": "nomod:ejemplo_1",
+        "name": "nomod:monserrat",
         "stream": true
       }
     ]
@@ -12,6 +12,15 @@
     "sounds": [
       {
         "name": "nomod:ejemplo_2",
+        "stream": true
+      }
+    ]
+  },
+
+  "fiufiu": {
+    "sounds": [
+      {
+        "name": "nomod:fiufiu",
         "stream": true
       }
     ]

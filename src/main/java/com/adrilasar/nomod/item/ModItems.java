@@ -30,12 +30,16 @@ public class ModItems {
     public static final RegistryObject<Item> RAW_KALCENITA = ITEMS.register("raw_kalcenita",
             () -> new Item(new Item.Properties().tab(ItemGroup.TAB_MISC)));
 
-    public static final RegistryObject<Item> DANDY_L_MUSIC_USB = ITEMS.register("dandy_l_music_usb",
-            () -> new SpeakerUsb(4, ModSounds.EJEMPLO_1,
+    public static final RegistryObject<Item> MONSERRAT_MUSIC_USB = ITEMS.register("monserrat_music_usb",
+            () -> new SpeakerUsb(4, ModSounds.MONSERRAT,
                     new Item.Properties().tab(ModItemGroup.NOMOD_TAB).stacksTo(1)));
 
     public static final RegistryObject<Item> DANDY_G_MUSIC_USB = ITEMS.register("dandy_g_music_usb",
             () -> new SpeakerUsb(4, ModSounds.EJEMPLO_2,
+                    new Item.Properties().tab(ModItemGroup.NOMOD_TAB).stacksTo(1)));
+
+    public static final RegistryObject<Item> FIUFIU_MUSIC_USB = ITEMS.register("fiufiu_music_usb",
+            () -> new SpeakerUsb(4, ModSounds.FIUFIU,
                     new Item.Properties().tab(ModItemGroup.NOMOD_TAB).stacksTo(1)));
 
     //

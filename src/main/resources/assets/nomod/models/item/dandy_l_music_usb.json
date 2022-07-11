@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "nomod:item/speaker_usb"
-  }
-}
