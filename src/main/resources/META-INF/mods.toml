@@ -62,9 +62,3 @@ El Nomo mod/NomoD. No hay que explicar mucho mas...
     versionRange="[3.0.73,)"
     ordering="BEFORE"
     side="BOTH"
-[[dependencies.nomod]]
-    modId="storagenetwork"
-    mandatory=false
-    versionRange="[2.0.1,)"
-    ordering="BEFORE"
-    side="BOTH"
