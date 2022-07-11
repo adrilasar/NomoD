@@ -4,7 +4,10 @@ import com.adrilasar.nomod.block.ModBlocks;
 import com.adrilasar.nomod.entity.client.GuardianRenderer;
 import com.adrilasar.nomod.entity.custom.ModEntityTypes;
 import com.adrilasar.nomod.item.ModItems;
+import com.adrilasar.nomod.sound.ModSounds;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -30,6 +33,7 @@ public class NomoD
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
         ModEntityTypes.register(eventBus);
+        ModSounds.register(eventBus);
 
         // Register the setup method for modloading
         eventBus.addListener(this::setup);
@@ -44,6 +48,7 @@ public class NomoD
 
     private void clientSetup(final FMLClientSetupEvent event) {
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.GUARDIAN_R.get(), GuardianRenderer::new);
+        RenderTypeLookup.setRenderLayer(ModBlocks.SPEAKER.get(), RenderType.solid());
     }
 
     private void setup(final FMLCommonSetupEvent event) {

@@ -1,0 +1,19 @@
+{
+  "ejemplo_1": {
+    "sounds": [
+      {
+        "name": "nomod:ejemplo_1",
+        "stream": true
+      }
+    ]
+  },
+
+  "ejemplo_2": {
+    "sounds": [
+      {
+        "name": "nomod:ejemplo_2",
+        "stream": true
+      }
+    ]
+  }
+}

@@ -2,11 +2,16 @@
   "itemGroup.nomodtab": "NomoD",
 
   "item.nomod.guardian_spawn_egg": "Spawn Ruin Guard",
-
   "item.nomod.kalcenita_ingot": "§5Kalcenite§r ingot",
   "item.nomod.raw_kalcenita": "Raw §5Kalcenite§r",
+  "item.nomod.nomod_charm": "§5NomoD§6 Charm§r",
+  "item.nomod.dandy_l_music_usb": "§dDandy Music Usb§r",
+  "item.nomod.dandy_l_music_usb.desc": "Range: §eLOCAL§r",
+  "item.nomod.dandy_g_music_usb": "§dDandy Music Usb§r",
+  "item.nomod.dandy_g_music_usb.desc": "Range: §4GLOBAL§r",
+
   "block.nomod.kalcenita_block": "§5Kalcenite§r block",
   "block.nomod.kalcenita_ore": "§5Kalcenite§r ore",
   "block.nomod.raw_iron_block": "Raw iron",
-  "item.nomod.nomod_charm": "§5NomoD§6 Charm§r"
+  "block.nomod.speaker": "Speaker"
 }

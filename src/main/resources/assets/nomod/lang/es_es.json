@@ -2,11 +2,16 @@
   "itemGroup.nomodtab": "NomoD",
 
   "item.nomod.guardian_spawn_egg": "Generar Guardian de las Ruinas",
-
   "item.nomod.kalcenita_ingot": "Lingote de §5Kalcenita§r",
   "item.nomod.raw_kalcenita": "§5Kalcenita§r en bruto",
+  "item.nomod.nomod_charm": "§6Amuleto§5 NomoD§r",
+  "item.nomod.dandy_l_music_usb": "§dDandy Music Usb§r",
+  "item.nomod.dandy_l_music_usb.desc": "Alcance: §eLOCAL§r",
+  "item.nomod.dandy_g_music_usb": "§dDandy Music Usb§r",
+  "item.nomod.dandy_g_music_usb.desc": "Alcance: §4GLOBAL§r",
+
   "block.nomod.kalcenita_block": "Bloque de §5Kalcenita§r",
   "block.nomod.kalcenita_ore": "Mena de §5Kalcenita§r",
   "block.nomod.raw_iron_block": "Hierro en bruto",
-  "item.nomod.nomod_charm": "§6Amuleto§5 NomoD§r"
+  "block.nomod.speaker": "Altavoz"
 }

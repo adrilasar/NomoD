@@ -1,10 +1,12 @@
 package com.adrilasar.nomod.block;
 
 import com.adrilasar.nomod.NomoD;
+import com.adrilasar.nomod.block.custom.Speaker;
 import com.adrilasar.nomod.item.ModItemGroup;
 import com.adrilasar.nomod.item.ModItems;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.JukeboxBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -34,6 +36,10 @@ public class ModBlocks
     public static final RegistryObject<Block> RAW_IRON_BLOCK = registerBlock("raw_iron_block",
             () -> new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops()),
             ItemGroup.TAB_BUILDING_BLOCKS);
+
+    public static final RegistryObject<Block> SPEAKER = registerBlock("speaker",
+            () -> new Speaker(AbstractBlock.Properties.of(Material.WOOD).strength(2.0F, 6.0F).noOcclusion()),
+            ModItemGroup.NOMOD_TAB);
 
     //REGISTRIES
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, ItemGroup tab) {
