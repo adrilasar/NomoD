@@ -5,9 +5,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.JukeboxBlock;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.item.DirectionalPlaceContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
@@ -26,13 +24,26 @@ import net.minecraft.world.World;
 public class Speaker extends JukeboxBlock
 {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
-    protected static final VoxelShape SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 26.0D, 16.0D);
+    protected static final VoxelShape S_SHAPE = Block.box(0.0D, 0.0D, 3.0D, 16.0D, 26.0D, 16.0D);
+    protected static final VoxelShape E_SHAPE = Block.box(3.0D, 0.0D, 0.0D, 16.0D, 26.0D, 16.0D);
+    protected static final VoxelShape W_SHAPE = Block.box(0.0D, 0.0D, 0.0D, 13.0D, 26.0D, 16.0D);
+    protected static final VoxelShape N_SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 26.0D, 13.0D);
+
     public Speaker(Properties properties) {
         super(properties);
     }
 
     public VoxelShape getShape(BlockState pState, IBlockReader pLevel, BlockPos pPos, ISelectionContext pContext) {
-        return SHAPE;
+        switch(pState.getValue(FACING)) {
+            case SOUTH:
+                return S_SHAPE;
+            case EAST:
+                return E_SHAPE;
+            case WEST:
+                return W_SHAPE;
+            default:
+                return N_SHAPE;
+        }
     }
 
     @Override
