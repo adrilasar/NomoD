@@ -135,6 +135,7 @@ dependencies {
 
 //    implementation fg.deobf("com.adrilasar.storage-network:storage-network:+")
     implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.16.5:3.0.73')
+    implementation 'net.jthink:jaudiotagger:3.0.1'
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"
     // compile "some.group:artifact:version"
