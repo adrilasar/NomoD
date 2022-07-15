@@ -2,7 +2,6 @@ package com.adrilasar.nomod.item;
 
 import com.adrilasar.nomod.NomoD;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyValue;
@@ -13,7 +12,7 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements IArmorMaterial
 {
-    KALCENITA("kalcenita", 41, new int[]{3, 6, 8, 3}, 20, SoundEvents.ARMOR_EQUIP_GOLD,
+    KALCENITA("kalcenita", 41, new int[]{3, 6, 8, 3}, 20, SoundEvents.ARMOR_EQUIP_IRON,
             4.0F, 0.2F, () -> Ingredient.of(ModItems.KALCENITA_INGOT.get()));
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};

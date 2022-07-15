@@ -45,32 +45,32 @@ public class ModItems {
 
     public static final RegistryObject<Item> KALCENITA_SWORD = ITEMS.register("kalcenita_sword",
             () -> new KalcenitaSword(ModItemTier.KALCENITA, 3, -2.4F,
-                    new Item.Properties().tab(ModItemGroup.NOMOD_TAB)));
+                    new Item.Properties().tab(ItemGroup.TAB_TOOLS)));
     public static final RegistryObject<Item> KALCENITA_PICKAXE = ITEMS.register("kalcenita_pickaxe",
             () -> new PickaxeItem(ModItemTier.KALCENITA, 1, -2.8F,
-                    new Item.Properties().tab(ModItemGroup.NOMOD_TAB)));
+                    new Item.Properties().tab(ItemGroup.TAB_TOOLS)));
     public static final RegistryObject<Item> KALCENITA_SHOVEL = ITEMS.register("kalcenita_shovel",
             () -> new ShovelItem(ModItemTier.KALCENITA, 1.5F, -3.0F,
-                    new Item.Properties().tab(ModItemGroup.NOMOD_TAB)));
+                    new Item.Properties().tab(ItemGroup.TAB_TOOLS)));
     public static final RegistryObject<Item> KALCENITA_AXE = ITEMS.register("kalcenita_axe",
             () -> new AxeItem(ModItemTier.KALCENITA, 4.5F, -2.9F,
-                    new Item.Properties().tab(ModItemGroup.NOMOD_TAB)));
+                    new Item.Properties().tab(ItemGroup.TAB_TOOLS)));
     public static final RegistryObject<Item> KALCENITA_HOE = ITEMS.register("kalcenita_hoe",
             () -> new HoeItem(ModItemTier.KALCENITA, -5, 0.0F,
-                    new Item.Properties().tab(ModItemGroup.NOMOD_TAB)));
+                    new Item.Properties().tab(ItemGroup.TAB_TOOLS)));
 
     public static final RegistryObject<Item> KALCENITA_HELMET = ITEMS.register("kalcenita_helmet",
             () -> new ArmorItem(ModArmorMaterials.KALCENITA, EquipmentSlotType.HEAD,
-                    new Item.Properties().tab(ModItemGroup.NOMOD_TAB)));
+                    new Item.Properties().tab(ItemGroup.TAB_COMBAT)));
     public static final RegistryObject<Item> KALCENITA_CHESTPLATE = ITEMS.register("kalcenita_chestplate",
             () -> new ArmorItem(ModArmorMaterials.KALCENITA, EquipmentSlotType.CHEST,
-                    new Item.Properties().tab(ModItemGroup.NOMOD_TAB)));
+                    new Item.Properties().tab(ItemGroup.TAB_COMBAT)));
     public static final RegistryObject<Item> KALCENITA_LEGGING = ITEMS.register("kalcenita_leggings",
             () -> new ArmorItem(ModArmorMaterials.KALCENITA, EquipmentSlotType.LEGS,
-                    new Item.Properties().tab(ModItemGroup.NOMOD_TAB)));
+                    new Item.Properties().tab(ItemGroup.TAB_COMBAT)));
     public static final RegistryObject<Item> KALCENITA_BOOTS = ITEMS.register("kalcenita_boots",
             () -> new ArmorItem(ModArmorMaterials.KALCENITA, EquipmentSlotType.FEET,
-                    new Item.Properties().tab(ModItemGroup.NOMOD_TAB)));
+                    new Item.Properties().tab(ItemGroup.TAB_COMBAT)));
 
     //
 
