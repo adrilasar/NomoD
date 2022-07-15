@@ -66,10 +66,7 @@ public class GuardianRuinas extends ZombieEntity implements IAnimatable {
      * If the entity has moved more than MIN_MOV units in either the x or z direction, then the entity is moving
      */
     private boolean isMoving() {
-        if(Math.abs(this.getDeltaMovement().x()) > MIN_DELTA || Math.abs(this.getDeltaMovement().z()) > MIN_DELTA){
-            return true;
-        }
-        return false;
+        return Math.abs(this.getDeltaMovement().x()) > MIN_DELTA || Math.abs(this.getDeltaMovement().z()) > MIN_DELTA;
     }
 
     @Override
@@ -119,8 +116,7 @@ public class GuardianRuinas extends ZombieEntity implements IAnimatable {
 
     @Override
     public void registerControllers(AnimationData data) {
-        data.addAnimationController(new AnimationController(this, "controller",
-                0, this::predicate));
+        data.addAnimationController(new AnimationController<>(this, "controller", 0, this::predicate));
     }
 
     @Override

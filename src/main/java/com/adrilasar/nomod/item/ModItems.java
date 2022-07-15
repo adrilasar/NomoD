@@ -2,10 +2,10 @@ package com.adrilasar.nomod.item;
 
 import com.adrilasar.nomod.NomoD;
 import com.adrilasar.nomod.entity.custom.ModEntityTypes;
+import com.adrilasar.nomod.item.custom.KalcenitaSword;
 import com.adrilasar.nomod.item.custom.SpeakerUsb;
 import com.adrilasar.nomod.sound.ModSounds;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -41,6 +41,26 @@ public class ModItems {
     public static final RegistryObject<Item> FIUFIU_MUSIC_USB = ITEMS.register("fiufiu_music_usb",
             () -> new SpeakerUsb(4, ModSounds.FIUFIU,
                     new Item.Properties().tab(ModItemGroup.NOMOD_TAB).stacksTo(1)));
+
+    public static final RegistryObject<Item> KALCENITA_SWORD = ITEMS.register("kalcenita_sword",
+            () -> new KalcenitaSword(ModItemTier.KALCENITA, 3, -2.4F,
+                    new Item.Properties().tab(ModItemGroup.NOMOD_TAB)));
+
+    public static final RegistryObject<Item> KALCENITA_PICKAXE = ITEMS.register("kalcenita_pickaxe",
+            () -> new PickaxeItem(ModItemTier.KALCENITA, 1, -2.8F,
+                    new Item.Properties().tab(ModItemGroup.NOMOD_TAB)));
+
+    public static final RegistryObject<Item> KALCENITA_SHOVEL = ITEMS.register("kalcenita_shovel",
+            () -> new ShovelItem(ModItemTier.KALCENITA, 1.5F, -3.0F,
+                    new Item.Properties().tab(ModItemGroup.NOMOD_TAB)));
+
+    public static final RegistryObject<Item> KALCENITA_AXE = ITEMS.register("kalcenita_axe",
+            () -> new AxeItem(ModItemTier.KALCENITA, 4.5F, -2.9F,
+                    new Item.Properties().tab(ModItemGroup.NOMOD_TAB)));
+
+    public static final RegistryObject<Item> KALCENITA_HOE = ITEMS.register("kalcenita_hoe",
+            () -> new HoeItem(ModItemTier.KALCENITA, -5, 0.0F,
+                    new Item.Properties().tab(ModItemGroup.NOMOD_TAB)));
 
     //
 

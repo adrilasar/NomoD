@@ -2,8 +2,8 @@
   "itemGroup.nomodtab": "NomoD",
 
   "item.nomod.guardian_spawn_egg": "Spawn Ruin Guard",
-  "item.nomod.kalcenita_ingot": "§5Kalcenite§r ingot",
-  "item.nomod.raw_kalcenita": "Raw §5Kalcenite§r",
+  "item.nomod.kalcenita_ingot": "§5Kalcenita§r ingot",
+  "item.nomod.raw_kalcenita": "Raw §5Kalcenita§r",
   "item.nomod.nomod_charm": "§5NomoD§6 Charm§r",
   "item.nomod.monserrat_music_usb": "§dMonserrat Music Usb§r",
   "item.nomod.monserrat_music_usb.desc": "Range: §eLOCAL§r",
@@ -12,8 +12,8 @@
   "item.nomod.fiufiu_music_usb": "§dMi Bebito FiuFiu Music Usb§r",
   "item.nomod.fiufiu_music_usb.desc": "Range: §4GLOBAL§r",
 
-  "block.nomod.kalcenita_block": "§5Kalcenite§r block",
-  "block.nomod.kalcenita_ore": "§5Kalcenite§r ore",
+  "block.nomod.kalcenita_block": "§5Kalcenita§r block",
+  "block.nomod.kalcenita_ore": "§5Kalcenita§r ore",
   "block.nomod.raw_iron_block": "Raw iron",
   "block.nomod.speaker": "Speaker"
 }

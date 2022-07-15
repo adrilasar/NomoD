@@ -5,7 +5,6 @@ import com.adrilasar.nomod.entity.client.GuardianRenderer;
 import com.adrilasar.nomod.entity.custom.ModEntityTypes;
 import com.adrilasar.nomod.item.ModItems;
 import com.adrilasar.nomod.sound.ModSounds;
-import net.minecraft.block.Blocks;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.common.MinecraftForge;
