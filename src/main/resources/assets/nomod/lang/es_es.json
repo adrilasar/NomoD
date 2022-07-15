@@ -5,12 +5,24 @@
   "item.nomod.kalcenita_ingot": "Lingote de §5Kalcenita§r",
   "item.nomod.raw_kalcenita": "§5Kalcenita§r en bruto",
   "item.nomod.nomod_charm": "§6Amuleto§5 NomoD§r",
+
   "item.nomod.monserrat_music_usb": "§dMonserrat Music Usb§r",
   "item.nomod.monserrat_music_usb.desc": "Alcance: §eLOCAL§r",
   "item.nomod.dandy_g_music_usb": "§dDandy Music Usb§r",
   "item.nomod.dandy_g_music_usb.desc": "Alcance: §4GLOBAL§r",
   "item.nomod.fiufiu_music_usb": "§dMi Bebito FiuFiu Music Usb§r",
   "item.nomod.fiufiu_music_usb.desc": "Range: §4GLOBAL§r",
+
+  "item.nomod.kalcenita_sword": "Casco de §5Kalcenita§r",
+  "item.nomod.kalcenita_pickaxe": "Casco de §5Kalcenita§r",
+  "item.nomod.kalcenita_shovel": "Casco de §5Kalcenita§r",
+  "item.nomod.kalcenita_axe": "Casco de §5Kalcenita§r",
+  "item.nomod.kalcenita_hoe": "Casco de §5Kalcenita§r",
+
+  "item.nomod.kalcenita_helmet": "Casco de §5Kalcenita§r",
+  "item.nomod.kalcenita_chestplate": "Peto de §5Kalcenita§r",
+  "item.nomod.kalcenita_leggings": "Grebas de §5Kalcenita§r",
+  "item.nomod.kalcenita_boots": "Botas de §5Kalcenita§r",
 
   "block.nomod.kalcenita_block": "Bloque de §5Kalcenita§r",
   "block.nomod.kalcenita_ore": "Mena de §5Kalcenita§r",

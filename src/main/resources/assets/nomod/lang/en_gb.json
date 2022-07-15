@@ -12,6 +12,17 @@
   "item.nomod.fiufiu_music_usb": "§dMi Bebito FiuFiu Music Usb§r",
   "item.nomod.fiufiu_music_usb.desc": "Range: §4GLOBAL§r",
 
+  "item.nomod.kalcenita_sword": "§5Kalcenita§r sword",
+  "item.nomod.kalcenita_pickaxe": "§5Kalcenita§r pickaxe",
+  "item.nomod.kalcenita_shovel": "§5Kalcenita§r shovel",
+  "item.nomod.kalcenita_axe": "§5Kalcenita§r axe",
+  "item.nomod.kalcenita_hoe": "§5Kalcenita§r hoe",
+
+  "item.nomod.kalcenita_helmet": "§5Kalcenita§r helmet",
+  "item.nomod.kalcenita_chestplate": "§5Kalcenita§r chestplate",
+  "item.nomod.kalcenita_leggings": "§5Kalcenita§r leggings",
+  "item.nomod.kalcenita_boots": "§5Kalcenita§r boots",
+
   "block.nomod.kalcenita_block": "§5Kalcenita§r block",
   "block.nomod.kalcenita_ore": "§5Kalcenita§r ore",
   "block.nomod.raw_iron_block": "Raw iron",
