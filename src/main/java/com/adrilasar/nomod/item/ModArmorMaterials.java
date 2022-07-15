@@ -13,8 +13,8 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements IArmorMaterial
 {
-    KALCENITA("kalcenita", 28, new int[]{2, 5, 8, 3}, 19, SoundEvents.ARMOR_EQUIP_GOLD,
-            2.0F, 0.0F, () -> Ingredient.of(ModItems.KALCENITA_INGOT.get()));
+    KALCENITA("kalcenita", 41, new int[]{3, 6, 8, 3}, 20, SoundEvents.ARMOR_EQUIP_GOLD,
+            4.0F, 0.2F, () -> Ingredient.of(ModItems.KALCENITA_INGOT.get()));
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
     private final String name;
