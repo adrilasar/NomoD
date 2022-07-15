@@ -2,9 +2,10 @@
   "itemGroup.nomodtab": "NomoD",
 
   "item.nomod.guardian_spawn_egg": "Spawn Ruin Guard",
-  "item.nomod.kalcenita_ingot": "§5Kalcenita§r ingot",
+  "item.nomod.kalcenita_ingot": "§5Kalcenita§r Ingot",
   "item.nomod.raw_kalcenita": "Raw §5Kalcenita§r",
   "item.nomod.nomod_charm": "§5NomoD§6 Charm§r",
+
   "item.nomod.monserrat_music_usb": "§dMonserrat Music Usb§r",
   "item.nomod.monserrat_music_usb.desc": "Range: §eLOCAL§r",
   "item.nomod.dandy_g_music_usb": "§dDandy Music Usb§r",
@@ -12,19 +13,19 @@
   "item.nomod.fiufiu_music_usb": "§dMi Bebito FiuFiu Music Usb§r",
   "item.nomod.fiufiu_music_usb.desc": "Range: §4GLOBAL§r",
 
-  "item.nomod.kalcenita_sword": "§5Kalcenita§r sword",
-  "item.nomod.kalcenita_pickaxe": "§5Kalcenita§r pickaxe",
-  "item.nomod.kalcenita_shovel": "§5Kalcenita§r shovel",
-  "item.nomod.kalcenita_axe": "§5Kalcenita§r axe",
-  "item.nomod.kalcenita_hoe": "§5Kalcenita§r hoe",
+  "item.nomod.kalcenita_sword": "§5Kalcenita§r Sword",
+  "item.nomod.kalcenita_pickaxe": "§5Kalcenita§r Pickaxe",
+  "item.nomod.kalcenita_shovel": "§5Kalcenita§r Shovel",
+  "item.nomod.kalcenita_axe": "§5Kalcenita§r Axe",
+  "item.nomod.kalcenita_hoe": "§5Kalcenita§r Hoe",
 
-  "item.nomod.kalcenita_helmet": "§5Kalcenita§r helmet",
-  "item.nomod.kalcenita_chestplate": "§5Kalcenita§r chestplate",
-  "item.nomod.kalcenita_leggings": "§5Kalcenita§r leggings",
-  "item.nomod.kalcenita_boots": "§5Kalcenita§r boots",
+  "item.nomod.kalcenita_helmet": "§5Kalcenita§r Helmet",
+  "item.nomod.kalcenita_chestplate": "§5Kalcenita§r Chestplate",
+  "item.nomod.kalcenita_leggings": "§5Kalcenita§r Leggings",
+  "item.nomod.kalcenita_boots": "§5Kalcenita§r Boots",
 
-  "block.nomod.kalcenita_block": "§5Kalcenita§r block",
-  "block.nomod.kalcenita_ore": "§5Kalcenita§r ore",
-  "block.nomod.raw_iron_block": "Raw iron",
+  "block.nomod.kalcenita_block": "Block of §5Kalcenita§r",
+  "block.nomod.kalcenita_ore": "§5Kalcenita§r Ore",
+  "block.nomod.raw_iron_block": "Raw Iron",
   "block.nomod.speaker": "Speaker"
 }

@@ -13,19 +13,19 @@
   "item.nomod.fiufiu_music_usb": "§dMi Bebito FiuFiu Music Usb§r",
   "item.nomod.fiufiu_music_usb.desc": "Range: §4GLOBAL§r",
 
-  "item.nomod.kalcenita_sword": "Casco de §5Kalcenita§r",
-  "item.nomod.kalcenita_pickaxe": "Casco de §5Kalcenita§r",
-  "item.nomod.kalcenita_shovel": "Casco de §5Kalcenita§r",
-  "item.nomod.kalcenita_axe": "Casco de §5Kalcenita§r",
-  "item.nomod.kalcenita_hoe": "Casco de §5Kalcenita§r",
+  "item.nomod.kalcenita_sword": "Espada de §5kalcenita§r",
+  "item.nomod.kalcenita_pickaxe": "Pico de §5kalcenita§r",
+  "item.nomod.kalcenita_shovel": "Pala de §5kalcenita§r",
+  "item.nomod.kalcenita_axe": "Hacha de §5kalcenita§r",
+  "item.nomod.kalcenita_hoe": "Azada de §5kalcenita§r",
 
-  "item.nomod.kalcenita_helmet": "Casco de §5Kalcenita§r",
-  "item.nomod.kalcenita_chestplate": "Peto de §5Kalcenita§r",
-  "item.nomod.kalcenita_leggings": "Grebas de §5Kalcenita§r",
-  "item.nomod.kalcenita_boots": "Botas de §5Kalcenita§r",
+  "item.nomod.kalcenita_helmet": "Casco de §5kalcenita§r",
+  "item.nomod.kalcenita_chestplate": "Peto de §5kalcenita§r",
+  "item.nomod.kalcenita_leggings": "Grebas de §5kalcenita§r",
+  "item.nomod.kalcenita_boots": "Botas de §5kalcenita§r",
 
-  "block.nomod.kalcenita_block": "Bloque de §5Kalcenita§r",
-  "block.nomod.kalcenita_ore": "Mena de §5Kalcenita§r",
+  "block.nomod.kalcenita_block": "Bloque de §5kalcenita§r",
+  "block.nomod.kalcenita_ore": "Mena de §5kalcenita§r",
   "block.nomod.raw_iron_block": "Hierro en bruto",
   "block.nomod.speaker": "Altavoz"
 }
