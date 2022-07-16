@@ -1,10 +1,14 @@
 package com.adrilasar.nomod;
 
 import com.adrilasar.nomod.block.ModBlocks;
+import com.adrilasar.nomod.container.ModContainers;
 import com.adrilasar.nomod.entity.client.GuardianRenderer;
 import com.adrilasar.nomod.entity.custom.ModEntityTypes;
 import com.adrilasar.nomod.item.ModItems;
+import com.adrilasar.nomod.screen.KalcenitaFurnaceScreen;
 import com.adrilasar.nomod.sound.ModSounds;
+import com.adrilasar.nomod.tileentity.ModTileEntities;
+import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.common.MinecraftForge;
@@ -33,6 +37,8 @@ public class NomoD
         ModBlocks.register(eventBus);
         ModEntityTypes.register(eventBus);
         ModSounds.register(eventBus);
+        ModTileEntities.register(eventBus);
+        ModContainers.register(eventBus);
 
         // Register the setup method for modloading
         eventBus.addListener(this::setup);
@@ -48,6 +54,8 @@ public class NomoD
     private void clientSetup(final FMLClientSetupEvent event) {
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.GUARDIAN_R.get(), GuardianRenderer::new);
         RenderTypeLookup.setRenderLayer(ModBlocks.SPEAKER.get(), RenderType.solid());
+        ScreenManager.register(ModContainers.KALCENITA_FURNACE_CONTAINER.get(),
+                KalcenitaFurnaceScreen::new);
     }
 
     private void setup(final FMLCommonSetupEvent event) {

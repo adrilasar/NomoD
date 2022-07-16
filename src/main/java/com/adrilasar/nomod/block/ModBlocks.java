@@ -1,12 +1,12 @@
 package com.adrilasar.nomod.block;
 
 import com.adrilasar.nomod.NomoD;
+import com.adrilasar.nomod.block.custom.KalcenitaFurnaceBlock;
 import com.adrilasar.nomod.block.custom.Speaker;
 import com.adrilasar.nomod.item.ModItemGroup;
 import com.adrilasar.nomod.item.ModItems;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.JukeboxBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -39,6 +39,10 @@ public class ModBlocks
 
     public static final RegistryObject<Block> SPEAKER = registerBlock("speaker",
             () -> new Speaker(AbstractBlock.Properties.of(Material.WOOD).strength(2.0F, 6.0F).noOcclusion()),
+            ModItemGroup.NOMOD_TAB);
+
+    public static final RegistryObject<Block> KALCENITA_FURNACE = registerBlock("kalcenita_furnace",
+            () -> new KalcenitaFurnaceBlock(AbstractBlock.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(3.5F)),
             ModItemGroup.NOMOD_TAB);
 
     //REGISTRIES

@@ -27,5 +27,8 @@
   "block.nomod.kalcenita_block": "Block of §5Kalcenita§r",
   "block.nomod.kalcenita_ore": "§5Kalcenita§r Ore",
   "block.nomod.raw_iron_block": "Raw Iron",
-  "block.nomod.speaker": "Speaker"
+  "block.nomod.speaker": "Speaker",
+  "block.nomod.kalcenita_furnace": "§5Kalcenita§r Furnace",
+
+  "screen.nomod.kalcenita_furnace": "§5Kalcenita§r Furnace"
 }
