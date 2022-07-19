@@ -15,12 +15,12 @@ public class ModContainers {
     public static DeferredRegister<ContainerType<?>> CONTAINERS
             = DeferredRegister.create(ForgeRegistries.CONTAINERS, NomoD.MOD_ID);
 
-    public static final RegistryObject<ContainerType<KalcenitaFurnaceContainer>> KALCENITA_FURNACE_CONTAINER
-            = CONTAINERS.register("kalcenita_furnace_container",
+    public static final RegistryObject<ContainerType<KalcenitaRefineryContainer>> KALCENITA_REFINERY_CONTAINER
+            = CONTAINERS.register("kalcenita_refinery_container",
             () -> IForgeContainerType.create(((windowId, inv, data) -> {
                 BlockPos pos = data.readBlockPos();
                 World world = inv.player.level;
-                return new KalcenitaFurnaceContainer(windowId, world, pos, inv, inv.player);
+                return new KalcenitaRefineryContainer(windowId, world, pos, inv, inv.player);
             })));
 
 

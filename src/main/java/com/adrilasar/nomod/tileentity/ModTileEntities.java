@@ -13,9 +13,9 @@ public class ModTileEntities {
     public static DeferredRegister<TileEntityType<?>> TILE_ENTITIES =
             DeferredRegister.create(ForgeRegistries.TILE_ENTITIES, NomoD.MOD_ID);
 
-    public static RegistryObject<TileEntityType<KalcenitaFurnaceTile>> KALCENITA_FURNACE_TILE =
-            TILE_ENTITIES.register("kalcenita_furnace_tile", () -> TileEntityType.Builder.of(
-                    KalcenitaFurnaceTile::new, ModBlocks.KALCENITA_FURNACE.get()).build(null));
+    public static RegistryObject<TileEntityType<KalcenitaRefineryTile>> KALCENITA_REFINERY_TILE =
+            TILE_ENTITIES.register("kalcenita_refinery_tile", () -> TileEntityType.Builder.of(
+                    KalcenitaRefineryTile::new, ModBlocks.KALCENITA_REFINERY.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         TILE_ENTITIES.register(eventBus);

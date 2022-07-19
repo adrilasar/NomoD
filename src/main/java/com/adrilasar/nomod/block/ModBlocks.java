@@ -1,7 +1,7 @@
 package com.adrilasar.nomod.block;
 
 import com.adrilasar.nomod.NomoD;
-import com.adrilasar.nomod.block.custom.KalcenitaFurnaceBlock;
+import com.adrilasar.nomod.block.custom.KalcenitaRefineryBlock;
 import com.adrilasar.nomod.block.custom.Speaker;
 import com.adrilasar.nomod.item.ModItemGroup;
 import com.adrilasar.nomod.item.ModItems;
@@ -41,8 +41,8 @@ public class ModBlocks
             () -> new Speaker(AbstractBlock.Properties.of(Material.WOOD).strength(2.0F, 6.0F).noOcclusion()),
             ModItemGroup.NOMOD_TAB);
 
-    public static final RegistryObject<Block> KALCENITA_FURNACE = registerBlock("kalcenita_furnace",
-            () -> new KalcenitaFurnaceBlock(AbstractBlock.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(3.5F)),
+    public static final RegistryObject<Block> KALCENITA_REFINERY = registerBlock("kalcenita_refinery",
+            () -> new KalcenitaRefineryBlock(AbstractBlock.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(3.5F)),
             ModItemGroup.NOMOD_TAB);
 
     //REGISTRIES

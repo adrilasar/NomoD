@@ -1,23 +1,25 @@
 package com.adrilasar.nomod.block.custom;
 
-import com.adrilasar.nomod.container.KalcenitaFurnaceContainer;
-import com.adrilasar.nomod.tileentity.KalcenitaFurnaceTile;
+import com.adrilasar.nomod.container.KalcenitaRefineryContainer;
+import com.adrilasar.nomod.tileentity.KalcenitaRefineryTile;
 import com.adrilasar.nomod.tileentity.ModTileEntities;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.inventory.container.Container;
+import net.minecraft.inventory.container.IContainerProvider;
 import net.minecraft.inventory.container.INamedContainerProvider;
-import net.minecraft.tileentity.AbstractFurnaceTileEntity;
+import net.minecraft.state.BooleanProperty;
+import net.minecraft.state.StateContainer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.IBlockReader;
@@ -26,25 +28,27 @@ import net.minecraftforge.fml.network.NetworkHooks;
 
 import javax.annotation.Nullable;
 
-public class KalcenitaFurnaceBlock extends Block
+public class KalcenitaRefineryBlock extends Block
 {
-    public KalcenitaFurnaceBlock(Properties p_i48440_1_) {
+    public static final BooleanProperty FUELED = BooleanProperty.create("fueled");
+    public KalcenitaRefineryBlock(Properties p_i48440_1_) {
         super(p_i48440_1_);
+        registerDefaultState(this.stateDefinition.any().setValue(FUELED, false));
     }
+
 
     @Override
     public ActionResultType use(BlockState state, World worldIn, BlockPos pos,
                                              PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if(!worldIn.isClientSide) {
             TileEntity tileEntity = worldIn.getBlockEntity(pos);
-            if(!player.isCrouching()) {
-                if(tileEntity instanceof KalcenitaFurnaceTile) {
-                    INamedContainerProvider containerProvider = createContainerProvider(worldIn, pos);
-
-                    NetworkHooks.openGui(((ServerPlayerEntity)player), containerProvider, tileEntity.getBlockPos());
-                } else {
-                    throw new IllegalStateException("Our Container provider is missing!");
-                }
+            if(tileEntity instanceof KalcenitaRefineryTile) {
+                worldIn.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.IRON_TRAPDOOR_OPEN,
+                        SoundCategory.BLOCKS, 0.5F, worldIn.random.nextFloat() * 0.1F + 0.9F);
+                INamedContainerProvider containerProvider = createContainerProvider(worldIn, pos);
+                NetworkHooks.openGui(((ServerPlayerEntity)player), containerProvider, tileEntity.getBlockPos());
+            } else {
+                throw new IllegalStateException("Our Container provider is missing!");
             }
         }
         return ActionResultType.SUCCESS;
@@ -55,13 +59,13 @@ public class KalcenitaFurnaceBlock extends Block
 
             @Override
             public ITextComponent getDisplayName() {
-                return new TranslationTextComponent("screen.nomod.kalcenita_furnace");
+                return new TranslationTextComponent("screen.nomod.kalcenita_refinery");
             }
 
             @Nullable
             @Override
             public Container createMenu(int i, PlayerInventory playerInventory, PlayerEntity playerEntity) {
-                return new KalcenitaFurnaceContainer(i, worldIn, pos, playerInventory, playerEntity);
+                return new KalcenitaRefineryContainer(i, worldIn, pos, playerInventory, playerEntity);
             }
         };
     }
@@ -69,7 +73,7 @@ public class KalcenitaFurnaceBlock extends Block
     @Nullable
     @Override
     public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-        return ModTileEntities.KALCENITA_FURNACE_TILE.get().create();
+        return ModTileEntities.KALCENITA_REFINERY_TILE.get().create();
     }
 
     @Override
@@ -81,13 +85,17 @@ public class KalcenitaFurnaceBlock extends Block
     public void onRemove(BlockState pState, World pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
         if (!pState.is(pNewState.getBlock())) {
             TileEntity tileentity = pLevel.getBlockEntity(pPos);
-            if (tileentity instanceof AbstractFurnaceTileEntity) {
-                InventoryHelper.dropContents(pLevel, pPos, (AbstractFurnaceTileEntity)tileentity);
-                ((AbstractFurnaceTileEntity)tileentity).getRecipesToAwardAndPopExperience(pLevel, Vector3d.atCenterOf(pPos));
-                pLevel.updateNeighbourForOutputSignal(pPos, this);
+            if (tileentity instanceof KalcenitaRefineryTile) {
+
             }
 
             super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
         }
+    }
+
+    @Override
+    protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> pBuilder) {
+        super.createBlockStateDefinition(pBuilder);
+        pBuilder.add(FUELED);
     }
 }

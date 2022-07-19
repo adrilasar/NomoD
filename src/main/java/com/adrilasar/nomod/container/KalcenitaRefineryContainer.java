@@ -15,26 +15,26 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
 
-public class KalcenitaFurnaceContainer extends Container
+public class KalcenitaRefineryContainer extends Container
 {
     private final TileEntity tileEntity;
     private final PlayerEntity playerEntity;
     private final IItemHandler playerInventory;
 
-    public KalcenitaFurnaceContainer(int windowId, World world, BlockPos pos,
-                                     PlayerInventory playerInventory, PlayerEntity player) {
-        super(ModContainers.KALCENITA_FURNACE_CONTAINER.get(), windowId);
+    public KalcenitaRefineryContainer(int windowId, World world, BlockPos pos,
+                                      PlayerInventory playerInventory, PlayerEntity player) {
+        super(ModContainers.KALCENITA_REFINERY_CONTAINER.get(), windowId);
         this.tileEntity = world.getBlockEntity(pos);
         playerEntity = player;
         this.playerInventory = new InvWrapper(playerInventory);
-        layoutPlayerInventorySlots(8, 86);
+        layoutPlayerInventorySlots(8, 84);
 
         if(tileEntity != null) {
             tileEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(h -> {
-                addSlot(new SlotItemHandler(h, 0, 80, 31));
-                addSlot(new SlotItemHandler(h, 1, 80, 53));
-                addSlot(new SlotItemHandler(h, 2, 50, 42));
-                addSlot(new SlotItemHandler(h, 3, 110, 42));
+                addSlot(new SlotItemHandler(h, 0, 68, 17));
+                addSlot(new SlotItemHandler(h, 1, 68, 53));
+                addSlot(new SlotItemHandler(h, 2, 33, 35));
+                addSlot(new SlotItemHandler(h, 3, 128, 35));
             });
         }
     }
@@ -42,7 +42,7 @@ public class KalcenitaFurnaceContainer extends Container
     @Override
     public boolean stillValid(PlayerEntity pPlayer) {
         return stillValid(IWorldPosCallable.create(tileEntity.getLevel(), tileEntity.getBlockPos()),
-                pPlayer, ModBlocks.KALCENITA_FURNACE.get());
+                pPlayer, ModBlocks.KALCENITA_REFINERY.get());
     }
 
     private int addSlotRange(IItemHandler handler, int index, int x, int y, int amount, int dx) {

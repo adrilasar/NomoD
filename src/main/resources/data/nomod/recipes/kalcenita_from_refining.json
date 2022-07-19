@@ -1,0 +1,18 @@
+{
+  "type": "nomod:refinery",
+  "ingredients": [
+    {
+      "item": "nomod:raw_kalcenita",
+      "count": 3
+    },
+    {
+      "item": "minecraft:lava_bucket"
+    },
+    {
+      "item": "nomod:nomod_charm"
+    }
+  ],
+  "output": {
+    "item": "nomod:kalcenita_ingot"
+  }
+}

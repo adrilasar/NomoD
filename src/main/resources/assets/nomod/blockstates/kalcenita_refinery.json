@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "fueled=false": { "model": "nomod:block/kalcenita_refinery" },
+    "fueled=true": { "model": "nomod:block/kalcenita_refinery_fueled" }
+  }
+}
