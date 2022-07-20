@@ -14,5 +14,6 @@
   ],
   "output": {
     "item": "nomod:kalcenita_ingot"
-  }
+  },
+  "cookingtime": 600
 }

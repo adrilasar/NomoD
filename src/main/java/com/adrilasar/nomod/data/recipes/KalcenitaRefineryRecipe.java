@@ -23,11 +23,15 @@ public class KalcenitaRefineryRecipe implements IKalcenitaRefineryRecipe
     private final ResourceLocation id;
     private final ItemStack output;
     private final NonNullList<Ingredient> recipeItems;
+    private final int cookingTime;
+    private final int decrementQuantity;
 
-    public KalcenitaRefineryRecipe(ResourceLocation id, ItemStack output, NonNullList<Ingredient> recipeItems) {
+    public KalcenitaRefineryRecipe(ResourceLocation id, ItemStack output, NonNullList<Ingredient> recipeItems, int pCookingTime, int pDecrementQuantity) {
         this.id = id;
         this.output = output;
         this.recipeItems = recipeItems;
+        this.cookingTime = pCookingTime;
+        this.decrementQuantity = pDecrementQuantity;
     }
 
     @Override
@@ -36,6 +40,8 @@ public class KalcenitaRefineryRecipe implements IKalcenitaRefineryRecipe
     }
 
     private boolean testItem(int slot,IInventory pInv) {
+        if(slot == 0)
+            return recipeItems.get(slot).test(pInv.getItem(slot)) && pInv.getItem(slot).getCount() >= this.decrementQuantity;
         return recipeItems.get(slot).test(pInv.getItem(slot));
     }
 
@@ -75,6 +81,14 @@ public class KalcenitaRefineryRecipe implements IKalcenitaRefineryRecipe
         }
     }
 
+    public int getCookingTime() {
+        return this.cookingTime;
+    }
+
+    public int getDecrement() {
+        return this.decrementQuantity;
+    }
+
     public static class Serializer extends ForgeRegistryEntry<IRecipeSerializer<?>>
             implements IRecipeSerializer<KalcenitaRefineryRecipe> {
 
@@ -89,7 +103,10 @@ public class KalcenitaRefineryRecipe implements IKalcenitaRefineryRecipe
                 inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
             }
 
-            return new KalcenitaRefineryRecipe(recipeId, output, inputs);
+            int i = JSONUtils.getAsInt(json, "cookingtime");
+            int c = JSONUtils.getAsInt(ingredients.get(0).getAsJsonObject(), "count");
+
+            return new KalcenitaRefineryRecipe(recipeId, output, inputs, i, c);
         }
 
         @Nullable
@@ -100,7 +117,9 @@ public class KalcenitaRefineryRecipe implements IKalcenitaRefineryRecipe
             inputs.replaceAll(ignored -> Ingredient.fromNetwork(buffer));
 
             ItemStack output = buffer.readItem();
-            return new KalcenitaRefineryRecipe(recipeId, output, inputs);
+            int i = buffer.readVarInt();
+            int c = buffer.readVarInt();
+            return new KalcenitaRefineryRecipe(recipeId, output, inputs, i ,c);
         }
 
         @Override
@@ -110,6 +129,8 @@ public class KalcenitaRefineryRecipe implements IKalcenitaRefineryRecipe
                 ing.toNetwork(buffer);
             }
             buffer.writeItemStack(recipe.output, false);
+            buffer.writeVarInt(recipe.cookingTime);
+            buffer.writeVarInt(recipe.decrementQuantity);
         }
     }
 }

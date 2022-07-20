@@ -1,12 +1,14 @@
 package com.adrilasar.nomod.container;
 
 import com.adrilasar.nomod.block.ModBlocks;
+import com.adrilasar.nomod.tileentity.KalcenitaRefineryTile;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.IIntArray;
 import net.minecraft.util.IWorldPosCallable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -20,6 +22,7 @@ public class KalcenitaRefineryContainer extends Container
     private final TileEntity tileEntity;
     private final PlayerEntity playerEntity;
     private final IItemHandler playerInventory;
+    private final IIntArray data;
 
     public KalcenitaRefineryContainer(int windowId, World world, BlockPos pos,
                                       PlayerInventory playerInventory, PlayerEntity player) {
@@ -37,6 +40,7 @@ public class KalcenitaRefineryContainer extends Container
                 addSlot(new SlotItemHandler(h, 3, 128, 35));
             });
         }
+        data = ((KalcenitaRefineryTile)world.getBlockEntity(pos)).getDataAccess();
     }
 
     @Override
